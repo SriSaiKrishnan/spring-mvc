@@ -3,12 +3,15 @@
  */
 package com.sai.mrb.model;
 
+import javax.persistence.Entity;
+
 import com.google.appengine.repackaged.org.joda.time.LocalDate;
 
 /**
  * @author sv
  *
  */
+@Entity
 public class MeetingRoom {
 	
 	private Integer id;

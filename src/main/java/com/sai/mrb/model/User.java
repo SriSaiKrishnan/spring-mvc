@@ -12,10 +12,14 @@ public class User {
 	private Integer id;
 	private String name;
 	private String emailid;
-	private Role role;
-	private Team team;
-
-	public User(Integer id, String name, String emailid, Role role, Team team) {
+	private String role;
+	private String team;
+	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public User(Integer id, String name, String emailid, String role, String team) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -48,19 +52,19 @@ public class User {
 		this.emailid = emailid;
 	}
 
-	public Role getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(Role role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 
-	public Team getTeam() {
+	public String getTeam() {
 		return team;
 	}
 
-	public void setTeam(Team team) {
+	public void setTeam(String team) {
 		this.team = team;
 	}
 

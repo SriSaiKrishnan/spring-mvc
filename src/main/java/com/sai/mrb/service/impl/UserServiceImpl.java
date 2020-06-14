@@ -5,6 +5,7 @@ package com.sai.mrb.service.impl;
 
 import java.util.List;
 
+import com.sai.mrb.model.Login;
 import com.sai.mrb.model.User;
 import com.sai.mrb.service.UserService;
 
@@ -13,7 +14,7 @@ import com.sai.mrb.service.UserService;
  *
  */
 public class UserServiceImpl implements UserService {
-
+	
 	@Override
 	public void addUser(User user) {
 		// TODO Auto-generated method stub
@@ -34,6 +35,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<User> getAllUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User validateUser(Login login) {
 		// TODO Auto-generated method stub
 		return null;
 	}
