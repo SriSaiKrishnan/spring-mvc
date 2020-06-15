@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,30 +16,30 @@
 	}
 %>
 
-<form action="adduser" method="post">
+<form:form action="adduser" method="post" modelAttribute="adduser">
 
-Enter the Username: <input type="text" id="uname" name="uname"> <br><br>
+Enter the Name: <form:input path="" type="text" id="uname" name="uname" /> <br><br>
 
-Enter the Password: <input type="password" id="password" name="password"> <br><br>
+Enter the Password: <form:input path="" type="password" id="password" name="password" /> <br><br>
 
-Select the Role: <select name="role" id="role">
-  <option value="Admin">Admin</option>
-  <option value="Employee">Employee</option>
-  <option value="Board of Directors">Board of Directors</option>
-</select> <br><br>
+Select the Role: <form:select path="role" name="role" id="role">
+  <form:option value="Admin" label="Admin"/> 
+  <form:option value="Employee" label="Employee" />
+  <form:option value="Board of Directors" label="Board of Directors"/>
+</form:select> <br><br>
 
-Select the Team:  <select name="team" id="team">
-  <option value="learn">Learn</option>
-  <option value="learnmobile">Learn Mobile</option>
-  <option value="community">Community Engagement</option>
-  <option value="bbss">Blackboard Student Service</option>
-  <option value="devops">Devops</option>
-  <option value="EQPT">EQPT</option>
-</select> <br><br>
+Select the Team:  <form:select path="team" name="team" id="team">
+  <form:option value="learn" label="learn" />
+  <form:option value="learnmobile" label="learnmobile" />
+  <form:option value="community" label="community" />
+  <form:option value="bbss" label="bbss" />
+  <form:option value="devops" label="devops" />
+  <form:option value="EQPT" label="EQPT" />
+</form:select> <br><br>
 
 <input type="submit" value="Add User">
 
-</form>
+</form:form>
 
 
 </body>
